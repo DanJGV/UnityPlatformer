@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float moveSpeed = 1;
     [SerializeField]
-    float jumpSpeed = 10;
+    float jumpSpeed = 5;
     Rigidbody rb;
     
     // Start is called before the first frame update
@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
                     Jump();
 
                 }
+               
             }
             
         }

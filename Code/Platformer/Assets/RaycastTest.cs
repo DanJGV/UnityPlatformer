@@ -24,10 +24,7 @@ public class RaycastTest : MonoBehaviour
             if(hit.transform != null)
             {
                 Debug.Log(hit.transform.name);
-                if(hit.transform.GetComponent<GroundInfo>() != null)
-                {
-                    Debug.Log(hit.transform.GetComponent<GroundInfo>().value);
-                }
+                
             }
         }
 
