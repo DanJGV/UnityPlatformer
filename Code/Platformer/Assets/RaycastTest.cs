@@ -16,7 +16,20 @@ public class RaycastTest : MonoBehaviour
     void Update()
     {
         Ray r = new Ray(transform.position, Vector3.down);
-        Debug.DrawLine(r.origin, r.direction, Color.red, 100.0f);
-        Debug.Log("Updating");
+        Debug.DrawLine(r.origin, r.origin + (Vector3.down * 10));
+        RaycastHit hit;
+
+        if(Physics.Raycast(r, out hit, 10))
+        {
+            if(hit.transform != null)
+            {
+                Debug.Log(hit.transform.name);
+                if(hit.transform.GetComponent<GroundInfo>() != null)
+                {
+                    Debug.Log(hit.transform.GetComponent<GroundInfo>().value);
+                }
+            }
+        }
+
     }
 }
